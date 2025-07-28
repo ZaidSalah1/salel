@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سليل</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>سليل</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#overview" class="nav-link">نظرة عامة</a>
+                <a href="#features" class="nav-link">المرافق</a>
+                <a href="#units" class="nav-link">الوحدات</a>
+                <a href="#gallery" class="nav-link">المعرض</a>
+                <a href="#contact" class="nav-link">تواصل معنا</a>
+                <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-video">
+                <video autoplay muted loop playsinline>
+                    <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-container">
+                <div class="hero-badge animate-fade-up">
+                    <span class="badge-icon">✨</span>
+                    <span>مشروع عقاري فاخر</span>
+                </div>
+
+                <h1 class="hero-title animate-fade-up delay-1">
+                    <span class="title-main">سليل</span>
+                    <span class="title-accent">الرياض</span>
+                </h1>
+
+                <p class="hero-subtitle animate-fade-up delay-2">
+                    حيث تلتقي <span class="highlight">الفخامة</span> بنمط الحياة العصري
+                    <br>في قلب العاصمة
+                </p>
+
+                <div class="hero-stats animate-fade-up delay-3">
+                    <div class="stat-item">
+                        <div class="stat-number">180+</div>
+                        <div class="stat-label">وحدة سكنية</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">مرفق حصري</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">2025</div>
+                        <div class="stat-label">سنة التسليم</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons animate-fade-up delay-4">
+                    <button class="btn-hero-primary" onclick="scrollToSection('contact')">
+                        <span class="btn-text">سجّل اهتمامك الآن</span>
+                        <span class="btn-icon">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <div class="btn-shine"></div>
+                    </button>
+
+                    <button class="btn-hero-secondary" onclick="scrollToSection('gallery')">
+                        <span class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                        <span>شاهد الجولة الافتراضية</span>
+                    </button>
+                </div>
+
+                <div class="hero-features animate-fade-up delay-5">
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>حي الملقا - الرياض</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-building"></i>
+                        <span>شقق 1-3 غرف</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tag"></i>
+                        <span>من 850,000 ريال</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-text">اكتشف المزيد</div>
+
+            <!-- <div class="scroll-wheel"></div> -->
+            <i class="fa-solid fa-arrow-down"></i>
+
+        </div>
+
+        <div class="hero-social">
+            <div class="social-item">
+                <a href="#" aria-label="تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="#" aria-label="انستغرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="#" aria-label="لينكد إن">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">نظرة عامة على المشروع</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p class="overview-description">
+                        يقدم مشروع "سليل" تجربة سكنية استثنائية في قلب الرياض، حيث يجمع بين التصميم المعماري الحديث
+                        والرفاهية العصرية.
+                        يضم المشروع مجموعة متنوعة من الوحدات السكنية الفاخرة المصممة لتلبي احتياجات العائلات العصرية.
+                    </p>
+                    <div class="overview-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>الموقع</h4>
+                                <p>الرياض - حي الملقا</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>أنواع الوحدات</h4>
+                                <p>شقق فاخرة 1-3 غرف</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>تاريخ التسليم</h4>
+                                <p>الربع الأول 2025</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>السعر الابتدائي</h4>
+                                <p>من 850,000 ريال</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        تحميل الكتيب التعريفي
+                    </button>
+                </div>
+                <div class="overview-image">
+                    <img src="img1.jpg" alt="مشروع سليل">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">المرافق والخدمات</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">مرافق عالمية المستوى لحياة مترفة</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>مسبح فاخر</h3>
+                    <p>مسبح بتصميم عصري مع منطقة استرخاء</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>صالة رياضية</h3>
+                    <p>صالة رياضية مجهزة بأحدث المعدات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>مدخل ذكي</h3>
+                    <p>نظام دخول ذكي بالبطاقات والتطبيق</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>أمن 24/7</h3>
+                    <p>حراسة أمنية على مدار الساعة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>مواقف مغطاة</h3>
+                    <p>مواقف سيارات مغطاة ومؤمنة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>حدائق خضراء</h3>
+                    <p>مساحات خضراء ومناطق للأطفال</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Units Section -->
+    <section id="units" class="units">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أنواع الوحدات</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">اختر الوحدة التي تناسب احتياجاتك</p>
+            </div>
+            <div class="units-tabs">
+                <button class="tab-btn active" onclick="showUnit('unit1')">غرفة واحدة</button>
+                <button class="tab-btn" onclick="showUnit('unit2')">غرفتان</button>
+                <button class="tab-btn" onclick="showUnit('unit3')">ثلاث غرف</button>
+            </div>
+            <div class="units-content">
+                <div class="unit-item active" id="unit1">
+                    <div class="unit-info">
+                        <h3>شقة غرفة واحدة</h3>
+                        <div class="unit-details">
+                            <div class="detail-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>المساحة: 75 متر مربع</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bed"></i>
+                                <span>غرفة نوم واحدة</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bath"></i>
+                                <span>حمام واحد</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>مطبخ مفتوح</span>
+                            </div>
+                        </div>
+                        <div class="unit-price">
+                            <span class="price">850,000 ريال</span>
+                            <span class="price-note">السعر الابتدائي</span>
+                        </div>
+                        <div class="unit-buttons">
+                            <button class="btn-primary">عرض التفاصيل</button>
+                            <button class="btn-secondary" onclick="scrollToSection('contact')">سجل اهتمامك</button>
+                        </div>
+                    </div>
+                    <div class="unit-image">
+                        <img src="1bed.png" alt="مخطط شقة غرفة واحدة">
+                    </div>
+                </div>
+                <div class="unit-item" id="unit2">
+                    <div class="unit-info">
+                        <h3>شقة غرفتان</h3>
+                        <div class="unit-details">
+                            <div class="detail-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>المساحة: 120 متر مربع</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bed"></i>
+                                <span>غرفتا نوم</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bath"></i>
+                                <span>حمامان</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>مطبخ منفصل</span>
+                            </div>
+                        </div>
+                        <div class="unit-price">
+                            <span class="price">1,200,000 ريال</span>
+                            <span class="price-note">السعر الابتدائي</span>
+                        </div>
+                        <div class="unit-buttons">
+                            <button class="btn-primary">عرض التفاصيل</button>
+                            <button class="btn-secondary" onclick="scrollToSection('contact')">سجل اهتمامك</button>
+                        </div>
+                    </div>
+                    <div class="unit-image">
+                        <img src="2bed.png" alt="مخطط شقة غرفتان">
+                    </div>
+                </div>
+                <div class="unit-item" id="unit3">
+                    <div class="unit-info">
+                        <h3>شقة ثلاث غرف</h3>
+                        <div class="unit-details">
+                            <div class="detail-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>المساحة: 180 متر مربع</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bed"></i>
+                                <span>ثلاث غرف نوم</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bath"></i>
+                                <span>ثلاثة حمامات</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>مطبخ واسع</span>
+                            </div>
+                        </div>
+                        <div class="unit-price">
+                            <span class="price">1,800,000 ريال</span>
+                            <span class="price-note">السعر الابتدائي</span>
+                        </div>
+                        <div class="unit-buttons">
+                            <button class="btn-primary">عرض التفاصيل</button>
+                            <button class="btn-secondary" onclick="scrollToSection('contact')">سجل اهتمامك</button>
+                        </div>
+                    </div>
+                    <div class="unit-image">
+                        <img src="3bed.png" alt="مخطط شقة ثلاث غرف">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">جولة بصرية</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">اكتشف جمال التصميم والتفاصيل الراقية</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="living room.jpg" alt="صالة المعيشة">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="gallery-caption">صالة المعيشة</div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="kitchen.jpeg" alt="المطبخ">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="gallery-caption">المطبخ</div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="bedroom.jpg" alt="غرفة النوم">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                     <div class="gallery-caption">غرفة النوم</div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="bathroom.webp" alt="الحمام">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="gallery-caption">الحمام</div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="balcony.jpg" alt="الشرفة">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="gallery-caption">الشرفة</div>
+                </div>
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="house.jpg" alt="المبنى الخارجي">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="gallery-caption">المبنى الخارجي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آراء العملاء</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"مشروع سليل يجمع بين الفخامة والراحة بطريقة استثنائية. التصميم راقي والموقع مثالي."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>أحمد السعيد</h4>
+                            <span>مالك شقة في سليل</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"الخدمات والمرافق في المشروع تفوق التوقعات. أنصح بشدة بالاستثمار في هذا المشروع."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>فاطمة العلي</h4>
+                            <span>مستثمرة عقارية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"جودة البناء والتشطيبات عالية المستوى. فريق العمل محترف ومتعاون."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>محمد الراشد</h4>
+                            <span>عميل سابق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Countdown -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>عرض محدود - بقي عدد قليل من الوحدات!</h2>
+                <p>لا تفوت الفرصة للحصول على وحدتك في أفخم مشاريع الرياض</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">30</span>
+                        <label>يوم</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">12</span>
+                        <label>ساعة</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">45</span>
+                        <label>دقيقة</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">30</span>
+                        <label>ثانية</label>
+                    </div>
+                </div>
+                <button class="btn-primary large" onclick="scrollToSection('contact')">
+                    <i class="fas fa-star"></i>
+                    سجل إهتمامك الآن
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">سجل اهتمامك</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">املأ النموذج وسيتواصل معك فريقنا خلال 24 ساعة</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="interestForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الجوال</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="unit-type">نوع الوحدة المفضل</label>
+                            <select id="unit-type" name="unit-type">
+                                <option value="">اختر نوع الوحدة</option>
+                                <option value="1-bedroom">غرفة واحدة</option>
+                                <option value="2-bedroom">غرفتان</option>
+                                <option value="3-bedroom">ثلاث غرف</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">ملاحظات إضافية</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال طلب الاهتمام
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>+966 11 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@saleel-riyadh.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>العنوان</h4>
+                            <p>الرياض - حي الملقا<br>طريق الملك فهد</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4>تابعنا على</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الموقع</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">موقع استراتيجي في قلب الرياض</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>قريب من المعالم الرئيسية</h3>
+                    <div class="location-items">
+                        <div class="location-item">
+                            <i class="fas fa-road"></i>
+                            <div>
+                                <h4>طريق الملك فهد</h4>
+                                <span>5 دقائق</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div>
+                                <h4>العثيم مول</h4>
+                                <span>10 دقائق</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>جامعة الملك سعود</h4>
+                                <span>15 دقيقة</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-hospital"></i>
+                            <div>
+                                <h4>مستشفى الملك فهد</h4>
+                                <span>12 دقيقة</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-plane"></i>
+                            <div>
+                                <h4>مطار الملك خالد</h4>
+                                <span>25 دقيقة</span>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-tree"></i>
+                            <div>
+                                <h4>حديقة الملك عبدالله</h4>
+                                <span>8 دقائق</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div id="map" class="map">
+                        <!-- Google Maps will be embedded here -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.1!2d46.6753!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnMzEuMSJF!5e0!3m2!1sen!2ssa!4v1234567890"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سليل</h3>
+                    <p>حيث تلتقي الفخامة بنمط الحياة في الرياض</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#overview">نظرة عامة</a></li>
+                        <li><a href="#features">المرافق</a></li>
+                        <li><a href="#units">الوحدات</a></li>
+                        <li><a href="#gallery">المعرض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+966 11 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@saleel-riyadh.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الرياض - حي الملقا</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات قانونية</h4>
+                    <ul>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">اتفاقية الاستخدام</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 سليل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button -->
+    <div class="floating-cta" id="floatingCTA">
+        <button onclick="scrollToSection('contact')">
+            <i class="fas fa-star"></i>
+            سجل اهتمامك
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
